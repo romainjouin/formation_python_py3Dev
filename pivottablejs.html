@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>PivotTable.js</title>
+
+        <!-- external libs from cdnjs -->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.min.css">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
+
+
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/pivottable/2.19.0/pivot.min.css">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pivottable/2.19.0/pivot.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pivottable/2.19.0/d3_renderers.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pivottable/2.19.0/c3_renderers.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pivottable/2.19.0/export_renderers.min.js"></script>
+
+        <style>
+            body {font-family: Verdana;}
+            .node {
+              border: solid 1px white;
+              font: 10px sans-serif;
+              line-height: 12px;
+              overflow: hidden;
+              position: absolute;
+              text-indent: 2px;
+            }
+            .c3-line, .c3-focused {stroke-width: 3px !important;}
+            .c3-bar {stroke: white !important; stroke-width: 1;}
+            .c3 text { font-size: 12px; color: grey;}
+            .tick line {stroke: white;}
+            .c3-axis path {stroke: grey;}
+            .c3-circle { opacity: 1 !important; }
+            .c3-xgrid-focus {visibility: hidden !important;}
+        </style>
+    </head>
+    <body>
+        <script type="text/javascript">
+            $(function(){
+                if(window.location != window.parent.location)
+                    $("<a>", {target:"_blank", href:""})
+                        .text("[pop out]").prependTo($("body"));
+
+                $("#output").pivotUI(
+                    $.csv.toArrays($("#output").text()),
+                    $.extend({
+                        renderers: $.extend(
+                            $.pivotUtilities.renderers,
+                            $.pivotUtilities.c3_renderers,
+                            $.pivotUtilities.d3_renderers,
+                            $.pivotUtilities.export_renderers
+                            ),
+                        hiddenAttributes: [""]
+                    }, {})
+                ).show();
+             });
+        </script>
+        <div id="output" style="display: none;">,id,sexe,sportivite,age,sur_velo
+0,101,F,-0.285718172948,66,True
+1,102,H,2.21944069061,37,True
+2,103,F,2.63725131876,49,True
+3,104,F,1.41355126417,33,True
+4,105,H,-1.33125476053,36,True
+5,106,F,2.85094115743,22,True
+6,107,H,3.33448020505,69,False
+7,108,F,1.83859388938,52,True
+8,109,H,4.74201837628,57,True
+9,110,H,6.41919911825,48,False
+10,111,F,1.79331219549,53,True
+11,112,H,-2.01661124031,84,True
+12,113,H,1.10788330732,55,True
+13,114,H,3.73878208344,23,True
+14,115,F,-1.09865904487,25,True
+15,116,H,-0.100969373183,82,True
+16,117,H,-0.87717813894,57,True
+17,118,F,0.954355558554,40,True
+18,119,H,1.42265760744,35,True
+19,120,H,5.01809539046,65,True
+20,121,F,1.47829758154,19,True
+21,122,F,-0.41804019052,19,True
+22,123,F,-1.66702028236,68,True
+23,124,F,1.72770240039,76,True
+24,125,H,1.9393620796,43,True
+25,126,F,2.27704043074,82,False
+26,127,F,-0.658307398201,67,True
+27,128,H,5.51678303011,23,True
+28,129,H,2.28204558668,56,False
+29,130,F,2.33336855966,75,False
+</div>
+    </body>
+</html>
