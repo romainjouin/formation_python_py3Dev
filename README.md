@@ -173,6 +173,24 @@ Sortie html
 8.3) rajouter un 'tooltip' avec des informations contenues dans une colonne de la dataframe  
 8.4) afficher deux figures sur une ligne de figure  
 8.5) ajouter une ligne signifiant la moyenne  
+
+## jour_4_matin_machine_learning.ipynb
+-1) Imports  
+0) Useful functions  
+1) Chargement des données  
+1) First checks  
+2) Binarization des âges  
+4) Grid search  
+5) Application grid search  
+5.1) Variable : Age  
+5.1.1) SVM  
+5.1.2) KNN  
+5.1.3) CLF  
+5.2) Variable : Sex  
+5.2.1) Random Forest  
+5.2.2) SVM  
+5.2.3) KNN  
+5.2.4) CLF  
   
 ## jour_9_extra_notebook_1_bases_de_python.ipynb  
 1) ajouts de fonctions  
