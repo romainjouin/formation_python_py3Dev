@@ -173,6 +173,20 @@ Sortie html
 8.3) rajouter un 'tooltip' avec des informations contenues dans une colonne de la dataframe  
 8.4) afficher deux figures sur une ligne de figure  
 8.5) ajouter une ligne signifiant la moyenne  
+## jour_4_modelisation_en_11_lignes_de_code.ipynb
+0) import de données
+0.1) copier les colonnes de la documentation pour les mettre dans la df
+0.2) on va faire du one-hot encoding sur chaque attribut de type "string" de la database :
+0.2.1) La fonction "get_dummies" crée les colonnes automatiquement pour le one-hot encoding
+0.2.2) pd.get_dummies :
+1) exploration de données
+1.1) afficher les colonnes
+3) Divise la base d'apprentissage en "jeu d'apprentissage" et "jeu de test"
+4.1) scoring du modèle
+5) La killer-feature du random forest : feature_importances
+6) utilisons un autre algorithme
+6.1) XGBoost
+6.2) CatBoost
 
 ## jour_4_matin_machine_learning.ipynb
 -1) Imports  
