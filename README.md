@@ -173,7 +173,7 @@ Sortie html
 8.3) rajouter un 'tooltip' avec des informations contenues dans une colonne de la dataframe  
 8.4) afficher deux figures sur une ligne de figure  
 8.5) ajouter une ligne signifiant la moyenne  
-## jour_4_modelisation_en_11_lignes_de_code.ipynb
+## jour_4_1_modelisation_en_11_lignes_de_code.ipynb
 0) import de données
 0.1) copier les colonnes de la documentation pour les mettre dans la df
 0.2) on va faire du one-hot encoding sur chaque attribut de type "string" de la database :
